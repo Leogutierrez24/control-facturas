@@ -1,0 +1,11 @@
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\bin\Debug\BLL.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\bin\Debug\BLL.pdb
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\bin\Debug\BE.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\bin\Debug\DAL.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\bin\Debug\BE.pdb
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\bin\Debug\DAL.pdb
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\obj\Debug\BLL.csproj.Up2Date
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\obj\Debug\BLL.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BLL\obj\Debug\BLL.pdb

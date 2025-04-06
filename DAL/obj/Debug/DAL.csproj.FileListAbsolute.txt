@@ -1,0 +1,11 @@
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\bin\Debug\DAL.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\bin\Debug\DAL.pdb
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\bin\Debug\BE.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\bin\Debug\System.Data.SQLite.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\bin\Debug\BE.pdb
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\bin\Debug\System.Data.SQLite.xml
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\obj\Debug\DAL.csproj.Up2Date
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\obj\Debug\DAL.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\DAL\obj\Debug\DAL.pdb
