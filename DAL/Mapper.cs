@@ -15,9 +15,9 @@ namespace DAL
             conexion = Conexion.ObtenerInstancia();
         }
 
-        public abstract int Insertar(T obj);
-        public abstract int Actualizar(T obj);
-        public abstract T ObtenerPorID(int id);
-        public abstract List<T> ObtenerTodos();
+        public abstract int Insert(T obj);
+        public abstract int Update(T obj);
+        public abstract BE.Resultado<T> GetById(int id);
+        public abstract List<T> GetAll();
     }
 }

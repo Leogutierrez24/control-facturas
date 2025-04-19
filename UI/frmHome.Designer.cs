@@ -32,25 +32,25 @@
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -92,84 +92,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Prestadores";
             // 
-            // groupBox2
+            // groupBox3
             // 
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(623, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(287, 181);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Facturas";
+            this.groupBox3.Controls.Add(this.button8);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.radioButton3);
+            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Location = new System.Drawing.Point(6, 560);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(389, 77);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Filtros";
             // 
-            // label1
+            // button8
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Facturas pendientes:";
+            this.button8.Location = new System.Drawing.Point(305, 16);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 46);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Aplicar";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // textBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Facturas por vencer:";
+            this.textBox1.Location = new System.Drawing.Point(6, 42);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(293, 20);
+            this.textBox1.TabIndex = 7;
             // 
-            // button3
+            // radioButton3
             // 
-            this.button3.Location = new System.Drawing.Point(6, 84);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 37);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Cargar nueva factura";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(98, 84);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 37);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Ver facturas pendientes";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(190, 84);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 37);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Ver facturas por vencer";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(6, 127);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 37);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Ver facturas vencidas";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(98, 127);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(86, 37);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Buscar Factura";
-            this.button7.UseVisualStyleBackColor = true;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(178, 19);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(121, 17);
+            this.radioButton3.TabIndex = 6;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Facturas pendientes";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
@@ -194,55 +156,94 @@
             this.radioButton2.Text = "Punto de venta";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // groupBox2
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(178, 19);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(121, 17);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Facturas pendientes";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(623, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(287, 181);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Facturas";
             // 
-            // groupBox3
+            // button7
             // 
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Location = new System.Drawing.Point(6, 560);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(389, 77);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filtros";
+            this.button7.Location = new System.Drawing.Point(98, 127);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(86, 37);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Buscar Factura";
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // button6
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 20);
-            this.textBox1.TabIndex = 7;
+            this.button6.Location = new System.Drawing.Point(6, 127);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(86, 37);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Ver facturas vencidas";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // button5
             // 
-            this.button8.Location = new System.Drawing.Point(305, 16);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 46);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Aplicar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button5.Location = new System.Drawing.Point(190, 84);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(86, 37);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Ver facturas por vencer";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(98, 84);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 37);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Ver facturas pendientes";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 84);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 37);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Cargar nueva factura";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Facturas por vencer:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Facturas pendientes:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(629, 653);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Fecha";
+            this.label3.Text = "01/01/1900";
             // 
             // frmHome
             // 
@@ -256,10 +257,10 @@
             this.Text = "Control de Facturación OSDEL";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

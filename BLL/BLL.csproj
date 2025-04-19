@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OperacionDebito.cs" />
+    <Compile Include="OperacionPago.cs" />
     <Compile Include="ServicioDebito.cs" />
-    <Compile Include="ServicioFactura.cs" />
+    <Compile Include="ServiceFactura.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicioPrestador.cs" />
   </ItemGroup>

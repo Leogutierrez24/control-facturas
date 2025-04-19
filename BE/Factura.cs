@@ -26,14 +26,14 @@ namespace BE
 		public int PuntoVenta
 		{
 			get { return puntoVenta; }
-			set { puntoVenta = value; }
+			set { if (value >= 0) puntoVenta = value; }
 		}
 
 		private int numero;
 		public int Numero
 		{
 			get { return numero; }
-			set { numero = value; }
+			set { if (value >= 0) numero = value; }
 		}
 
 		private DateTime fechaCreacion;
@@ -64,6 +64,19 @@ namespace BE
 			set { observacion = value; }
 		}
 
+		private List<Debito> debitos = new List<Debito>();
+		public List<Debito> Debitos
+		{
+			get { return debitos; }
+			set { debitos = value; }
+		}
+
+		private List<Pago> pagos = new List<Pago>();
+		public List<Pago> Pagos
+		{
+			get { return pagos; }
+			set { pagos = value; }
+		}
 
 	}
 }

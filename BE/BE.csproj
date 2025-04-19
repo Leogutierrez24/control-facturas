@@ -42,13 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Debito.cs" />
+    <Compile Include="EstadoDebito.cs" />
     <Compile Include="Factura.cs" />
-    <Compile Include="FacturaPaga.cs" />
-    <Compile Include="FacturaPagaConDebito.cs" />
-    <Compile Include="FacturaRechazada.cs" />
     <Compile Include="Pago.cs" />
     <Compile Include="Prestador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resultado.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

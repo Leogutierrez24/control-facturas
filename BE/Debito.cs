@@ -26,7 +26,15 @@ namespace BE
 		public float Monto
 		{
 			get { return monto; }
-			set { monto = value; }
+			set { if (value >= 0) monto = value; }
 		}
+
+		private EstadoDebito estado;					
+		public EstadoDebito Estado
+		{
+			get { return estado; }
+			set { estado = value; }
+		}
+
 	}
 }
