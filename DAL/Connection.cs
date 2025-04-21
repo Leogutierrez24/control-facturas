@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Conexion
+    public class Connection
     {
-        private static Conexion instance;
+        private static Connection instance;
 
-        public static Conexion ObtenerInstancia()
+        public static Connection ObtenerInstancia()
         {
-            if (instance == null) instance = new Conexion();
+            if (instance == null) instance = new Connection();
             return instance;
         }
 
-        private Conexion()
+        private Connection()
         {
 
         }

@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\bll\\servicefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|solutionrelative:bll\\servicefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\bll\\servicedebito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|solutionrelative:bll\\servicedebito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B2EE591-6F76-4F11-B45E-94D3081AA8D2}|DAL\\DAL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B2EE591-6F76-4F11-B45E-94D3081AA8D2}|DAL\\DAL.csproj|solutionrelative:dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\bll\\operacionpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|solutionrelative:bll\\operacionpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B2EE591-6F76-4F11-B45E-94D3081AA8D2}|DAL\\DAL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\dal\\facturamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B2EE591-6F76-4F11-B45E-94D3081AA8D2}|DAL\\DAL.csproj|solutionrelative:dal\\facturamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\be\\estadodebito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|solutionrelative:be\\estadodebito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\be\\debito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|solutionrelative:be\\debito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\bll\\operaciondebito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|solutionrelative:bll\\operaciondebito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\be\\debito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|solutionrelative:be\\debito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\be\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|solutionrelative:be\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+      "AbsoluteMoniker": "D:0:0:{7B2EE591-6F76-4F11-B45E-94D3081AA8D2}|DAL\\DAL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\dal\\debitomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B2EE591-6F76-4F11-B45E-94D3081AA8D2}|DAL\\DAL.csproj|solutionrelative:dal\\debitomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,103 +47,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Mapper.cs",
-              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\DAL\\Mapper.cs",
-              "RelativeDocumentMoniker": "DAL\\Mapper.cs",
-              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\DAL\\Mapper.cs",
-              "RelativeToolTip": "DAL\\Mapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T23:46:18.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FacturaMapper.cs",
-              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\DAL\\FacturaMapper.cs",
-              "RelativeDocumentMoniker": "DAL\\FacturaMapper.cs",
-              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\DAL\\FacturaMapper.cs",
-              "RelativeToolTip": "DAL\\FacturaMapper.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwBUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T23:46:11.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OperacionPago.cs",
-              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\OperacionPago.cs",
-              "RelativeDocumentMoniker": "BLL\\OperacionPago.cs",
-              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\OperacionPago.cs",
-              "RelativeToolTip": "BLL\\OperacionPago.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T23:14:09.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OperacionDebito.cs",
-              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\OperacionDebito.cs",
-              "RelativeDocumentMoniker": "BLL\\OperacionDebito.cs",
-              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\OperacionDebito.cs",
-              "RelativeToolTip": "BLL\\OperacionDebito.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T22:53:42.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServiceFactura.cs",
-              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\ServiceFactura.cs",
-              "RelativeDocumentMoniker": "BLL\\ServiceFactura.cs",
-              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\ServiceFactura.cs",
-              "RelativeToolTip": "BLL\\ServiceFactura.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAYwD8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T16:45:53.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EstadoDebito.cs",
-              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BE\\EstadoDebito.cs",
-              "RelativeDocumentMoniker": "BE\\EstadoDebito.cs",
-              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BE\\EstadoDebito.cs",
-              "RelativeToolTip": "BE\\EstadoDebito.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T16:40:48.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Debito.cs",
               "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BE\\Debito.cs",
               "RelativeDocumentMoniker": "BE\\Debito.cs",
               "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BE\\Debito.cs",
               "RelativeToolTip": "BE\\Debito.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T16:38:59.514Z"
+              "WhenOpened": "2025-04-21T01:35:00.523Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ClassDiagram1.cd",
-              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BE\\ClassDiagram1.cd",
-              "RelativeDocumentMoniker": "BE\\ClassDiagram1.cd",
-              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BE\\ClassDiagram1.cd",
-              "RelativeToolTip": "BE\\ClassDiagram1.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2025-04-18T16:37:49.636Z"
+              "DocumentIndex": 3,
+              "Title": "DebitoMapper.cs",
+              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\DAL\\DebitoMapper.cs",
+              "RelativeDocumentMoniker": "DAL\\DebitoMapper.cs",
+              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\DAL\\DebitoMapper.cs",
+              "RelativeToolTip": "DAL\\DebitoMapper.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAASwBUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T01:24:11.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceDebito.cs",
+              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\ServiceDebito.cs",
+              "RelativeDocumentMoniker": "BLL\\ServiceDebito.cs",
+              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\ServiceDebito.cs",
+              "RelativeToolTip": "BLL\\ServiceDebito.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T01:18:35.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OperacionDebito.cs",
+              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\OperacionDebito.cs",
+              "RelativeDocumentMoniker": "BLL\\OperacionDebito.cs",
+              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\OperacionDebito.cs",
+              "RelativeToolTip": "BLL\\OperacionDebito.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T01:18:19.45Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -9,6 +9,19 @@ namespace DAL
 {
     public class FacturaMapper : Mapper<BE.Factura>
     {
+        private static FacturaMapper instance = null;
+
+        private FacturaMapper()
+        {
+
+        }
+
+        public static FacturaMapper GetInstance()
+        {
+            if (instance == null) instance = new FacturaMapper();
+            return instance;
+        }
+
         public override int Update(Factura obj)
         {
             throw new NotImplementedException();
@@ -19,22 +32,22 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public override BE.Resultado<BE.Factura> GetById(int id)
+        public override BE.Resultado<BE.Factura> SelectById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public override List<Factura> GetAll()
+        public override List<Factura> SelectAll()
         {
             throw new NotImplementedException();
         }
 
-        public BE.Factura GetByNumero(int numero, int prestadorID)
+        public BE.Factura SelectByNumero(int numero, int prestadorID)
         {
             throw new NotImplementedException();
         }
 
-        public List<BE.Factura> GetAllByPrestador(int id)
+        public List<BE.Factura> SelectAllByPrestador(int id)
         {
             throw new NotImplementedException();
         }

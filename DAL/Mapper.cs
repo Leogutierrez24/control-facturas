@@ -8,16 +8,16 @@ namespace DAL
 {
     public abstract class Mapper<T>
     {
-        private readonly Conexion conexion;
+        private readonly Connection conexion;
 
         public Mapper()
         {
-            conexion = Conexion.ObtenerInstancia();
+            conexion = Connection.ObtenerInstancia();
         }
 
         public abstract int Insert(T obj);
         public abstract int Update(T obj);
-        public abstract BE.Resultado<T> GetById(int id);
-        public abstract List<T> GetAll();
+        public abstract BE.Resultado<T> SelectById(int id);
+        public abstract List<T> SelectAll();
     }
 }

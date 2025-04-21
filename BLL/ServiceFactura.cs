@@ -10,12 +10,12 @@ namespace BLL
 {
     public class ServiceFactura
     {
-        private DAL.FacturaMapper mapper;
+        private readonly DAL.FacturaMapper mapper;
         private static ServiceFactura instance = null;
 
         private ServiceFactura() 
         { 
-            mapper = new DAL.FacturaMapper();
+            mapper = DAL.FacturaMapper.GetInstance();
         }
 
         public static ServiceFactura GetInstance()
@@ -27,10 +27,10 @@ namespace BLL
             return instance;
         }
 
-        public int LoadFactura(BE.Factura factura, BE.Prestador prestador)
+        public int Load(BE.Factura factura, BE.Prestador prestador)
         {
             int resultado = 0;
-            Factura facturaRepetida = mapper.GetByNumero(factura.Numero, prestador.ID);
+            Factura facturaRepetida = mapper.SelectByNumero(factura.Numero, prestador.ID);
             if (facturaRepetida.ID != 0)
             {
                 resultado = -1;
@@ -43,13 +43,13 @@ namespace BLL
 
         public List<BE.Factura> FindAllByPrestador(BE.Prestador prestador)
         {
-            List<BE.Factura> facturas = mapper.GetAllByPrestador(prestador.ID);
+            List<BE.Factura> facturas = mapper.SelectAllByPrestador(prestador.ID);
             return facturas;
         }
 
         public Resultado<BE.Factura> FindById(int id)
         {
-            return mapper.GetById(id);
+            return mapper.SelectById(id);
         }
 
         public OperacionDebito AddDebito(BE.Factura factura, BE.Debito debito)

@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DebitoMapper.cs" />
     <Compile Include="FacturaMapper.cs" />
     <Compile Include="Mapper.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="PrestadorMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

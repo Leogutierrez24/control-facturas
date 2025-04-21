@@ -36,5 +36,12 @@ namespace BE
 			set { estado = value; }
 		}
 
+		public Debito()
+		{
+			id = 0;
+			fechaPresentacion = DateTime.Now;
+			monto = 0f;
+			estado = EstadoDebito.Pendiente;
+		}
 	}
 }
