@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BDCEE29-1010-46CE-89C4-EBD2E3A433D8}|DAL\\DAL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\dal\\facturamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BDCEE29-1010-46CE-89C4-EBD2E3A433D8}|DAL\\DAL.csproj|solutionrelative:dal\\facturamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\bll\\servicefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D8DF18-5D1F-48E2-BAFB-795D4CDBCB57}|BLL\\BLL.csproj|solutionrelative:bll\\servicefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|i:\\proyectos\\controlfacturacion-app\\controlfacturas-app\\be\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B4B154E-3F5C-4745-94F9-3258C203667F}|BE\\BE.csproj|solutionrelative:be\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +39,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Factura.cs",
+              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BE\\Factura.cs",
+              "RelativeDocumentMoniker": "BE\\Factura.cs",
+              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BE\\Factura.cs",
+              "RelativeToolTip": "BE\\Factura.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T00:14:35.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FacturaMapper.cs",
+              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\DAL\\FacturaMapper.cs",
+              "RelativeDocumentMoniker": "DAL\\FacturaMapper.cs",
+              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\DAL\\FacturaMapper.cs",
+              "RelativeToolTip": "DAL\\FacturaMapper.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAawEsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T23:27:04.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceFactura.cs",
+              "DocumentMoniker": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\ServiceFactura.cs",
+              "RelativeDocumentMoniker": "BLL\\ServiceFactura.cs",
+              "ToolTip": "I:\\proyectos\\controlFacturacion-app\\controlFacturas-app\\BLL\\ServiceFactura.cs",
+              "RelativeToolTip": "BLL\\ServiceFactura.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T23:26:53.279Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -27,18 +27,21 @@ namespace BLL
             return instance;
         }
 
-        public int Load(BE.Factura factura, BE.Prestador prestador)
+        public int Load(Factura factura, Prestador prestador)
         {
-            int resultado = 0;
-            Factura facturaRepetida = mapper.SelectByNumero(factura.Numero, prestador.ID);
-            if (facturaRepetida.ID != 0)
+            int result = 0;
+            Resultado<List<Factura>> queryResult = mapper.SelectByNumero(factura.Numero, prestador.ID);
+            if (queryResult.Value != null)
             {
-                resultado = -1;
+                if (queryResult.Value.Exists(f => f.PuntoVenta == factura.PuntoVenta))
+                {
+                    result = -1;
+                }
             } else
             {
                 mapper.Insert(factura);
             }
-            return resultado;
+            return result;
         }
 
         public List<BE.Factura> FindAllByPrestador(BE.Prestador prestador)

@@ -22,6 +22,13 @@ namespace BE
 			set { nombre = value; }
 		}
 
+		private int puntoVenta;
+		public int PuntoVenta
+		{
+			get { return puntoVenta; }
+			set { puntoVenta = value; }
+		}
+
 		private List<Factura> facturas;
 		public List<Factura> Facturas
 		{

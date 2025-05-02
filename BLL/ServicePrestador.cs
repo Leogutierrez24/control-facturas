@@ -1,6 +1,7 @@
 ﻿using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,18 @@ namespace BLL
         public List<BE.Prestador> GetAll()
         {
             return mapper.SelectAll();
+        }
+
+        public int CountPendingFacturas(BE.Prestador prestador)
+        {
+            int result = 0;
+
+            if (prestador.Facturas.Count > 0)
+            {
+
+            }
+
+            return result;
         }
     }
 }

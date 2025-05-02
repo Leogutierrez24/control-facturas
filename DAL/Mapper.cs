@@ -8,11 +8,11 @@ namespace DAL
 {
     public abstract class Mapper<T>
     {
-        private readonly Connection conexion;
+        protected readonly Connection _con;
 
         public Mapper()
         {
-            conexion = Connection.ObtenerInstancia();
+            _con = Connection.GetInstance();
         }
 
         public abstract int Insert(T obj);

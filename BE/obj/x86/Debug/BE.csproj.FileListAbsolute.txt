@@ -1,0 +1,6 @@
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BE\bin\x86\Debug\BE.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BE\bin\x86\Debug\BE.pdb
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BE\obj\x86\Debug\BE.csproj.AssemblyReference.cache
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BE\obj\x86\Debug\BE.csproj.CoreCompileInputs.cache
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BE\obj\x86\Debug\BE.dll
+I:\proyectos\controlFacturacion-app\controlFacturas-app\BE\obj\x86\Debug\BE.pdb
