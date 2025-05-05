@@ -99,5 +99,17 @@ namespace UI
         {
             FiltPrestadores();
         }
+
+        private void NuevoPrestador_btn_Click(object sender, EventArgs e)
+        {
+            frmNuevoPrestador form = new frmNuevoPrestador(servicePrestador, prestadores);
+            form.ShowDialog();
+            LoadPrestadores();
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

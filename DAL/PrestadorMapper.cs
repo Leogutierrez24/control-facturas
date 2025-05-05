@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace DAL
 {
@@ -22,6 +23,17 @@ namespace DAL
         {
             if (instance == null) instance = new PrestadorMapper();
             return instance;
+        }
+
+        private BE.Prestador MapPrestador(DataRow row)
+        {
+            BE.Prestador p = new Prestador
+            {
+                ID = int.Parse(row["id"].ToString()),
+                Nombre = row["nombre"].ToString(),
+                PuntoVenta = int.Parse(row["punto_venta"].ToString())
+            };
+            return p;
         }
 
         public override List<BE.Prestador> SelectAll()
@@ -58,21 +70,10 @@ namespace DAL
             SQLiteParameter nombreParam = _con.CreateParameter(obj.Nombre, "nombre");
             SQLiteParameter puntoVentaParam = (obj.PuntoVenta != 0) ? _con.CreateParameter(obj.PuntoVenta, "puntoVenta") : null;
 
-            string variables = "nombre";
-
-            List<SQLiteParameter> paramList = new List<SQLiteParameter>
-            {
-                nombreParam,
-            };
-
-            if (puntoVentaParam != null)
-            {
-                paramList.Add(puntoVentaParam);
-                variables += ", punto_venta";
-            }
-
-            string query = $"INSERT INTO prestadores ({variables}) VALUES (@nombre, @puntoVenta);";
-            result = _con.Write(query, paramList);
+            string query = $"INSERT INTO prestadores (nombre, punto_venta) VALUES (@nombre, @puntoVenta);";
+            _con.Connect();
+            result = _con.Write(query, new List<SQLiteParameter> { nombreParam, puntoVentaParam });
+            _con.Disconnect();
             return result;
         }
 
@@ -83,7 +84,22 @@ namespace DAL
 
         public Resultado<BE.Prestador> SelectByName(string name)
         {
-            throw new NotImplementedException();
+            Resultado<BE.Prestador> result;
+            SQLiteParameter nombreParam = _con.CreateParameter(name, "nombre");
+            string query = "SELECT * FROM prestadores WHERE nombre=@nombre;";
+            _con.Connect();
+            DataTable data = _con.Read(query, new List<SQLiteParameter> { nombreParam });
+            _con.Disconnect();
+
+            if (data.Rows.Count > 0)
+            {
+                BE.Prestador prestador = MapPrestador(data.Rows[0]);
+                result = new Resultado<BE.Prestador>(true, prestador);
+            } else
+            {
+                result = new Resultado<BE.Prestador>(false, null);
+            }
+            return result;
         }
     }
 }

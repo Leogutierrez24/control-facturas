@@ -73,9 +73,33 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public override int Insert(Factura obj) // Continue HERE !!!!
+        public override int Insert(Factura obj)
         {
-            throw new NotImplementedException();
+            int result;
+
+            SQLiteParameter prestadorIDParam = _con.CreateParameter(obj.Prestador.ID, "prestadorID");
+            SQLiteParameter puntoVentaParam = _con.CreateParameter(obj.PuntoVenta, "puntoVenta");
+            SQLiteParameter numeroParam = _con.CreateParameter(obj.Numero, "numero");
+            SQLiteParameter fechaCreacionParam = _con.CreateParameter(obj.FechaCreacion.ToShortDateString(), "fechaCreacion");
+            SQLiteParameter fechaRecepcionParam = _con.CreateParameter(obj.FechaRecepcion.ToString(), "fechaRecepcion");
+            SQLiteParameter montoParam = _con.CreateParameter(obj.Monto, "monto");
+            SQLiteParameter observacionesParam = _con.CreateParameter(obj.Observacion, "observaciones");
+            string query = "INSERT INTO facturas (id_prestador, punto_venta, numero, fecha_creacion, fecha_recepcion, monto, observaciones) VALUES (@prestadorID, @puntoVenta, @numero, @fechaCreacion, @fechaRecepcion, @monto, @observaciones);";
+
+            _con.Connect();
+            result = _con.Write(query, new List<SQLiteParameter>
+            {
+                prestadorIDParam,
+                puntoVentaParam,
+                numeroParam,
+                fechaCreacionParam,
+                fechaRecepcionParam,
+                montoParam,
+                observacionesParam
+            });
+            _con.Disconnect();
+
+            return result;
         }
 
         public override BE.Resultado<BE.Factura> SelectById(int id)

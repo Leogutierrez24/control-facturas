@@ -26,7 +26,8 @@ namespace DAL
 
         private Connection()
         {
-            pathDB = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "database", "testingDB.db");
+            pathDB = Path.GetFullPath(@"..\..\..\..\DAL\database\testingDB.db");
+            Console.WriteLine(pathDB);
             stringConnection = $"Data Source={pathDB};Version=3;";
         }
 
