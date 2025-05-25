@@ -21,44 +21,64 @@ namespace UI
             InitializeComponent();
             servicePrestador = BLL.ServicePrestador.GetInstance();
             prestadores = servicePrestador.GetAll();
-            FiltPrestadores();
+            LoadPrestadores();
+        }
+
+        private void ConfigDataGridView()
+        {
+            Prestadores_dataGridView.Columns[0].Visible = false;
+            Prestadores_dataGridView.Columns[1].Width = 300;
+            Prestadores_dataGridView.Columns[2].Width = 105;
+            Prestadores_dataGridView.Columns[2].HeaderText = "Punto de Venta";
         }
 
         private void LoadPrestadores()
         {
             Prestadores_dataGridView.DataSource = null;
             Prestadores_dataGridView.DataSource = prestadores;
+            ConfigDataGridView();
         }
 
         private void LoadPrestadores(List<BE.Prestador> filteredList)
         {
             Prestadores_dataGridView.DataSource = null;
             Prestadores_dataGridView.DataSource = filteredList;
+            ConfigDataGridView();
         }
 
         private void FiltPrestadores()
         {
+            List<BE.Prestador> filteredList = new List<BE.Prestador>();
+
             if (Option01_radioButton.Checked)
             {
-                prestadores.OrderBy(p => p.Nombre);
-                LoadPrestadores();
+                filteredList = prestadores.OrderBy(p => p.Nombre).ToList();
+                LoadPrestadores(filteredList);
             }
             else if (Option02_radioButton.Checked) 
             {
-                prestadores.OrderByDescending(p => p.Nombre);
+                filteredList = prestadores.OrderByDescending(p => p.Nombre).ToList();
                 LoadPrestadores();
             }
             else
             {
-                if (!string.IsNullOrEmpty(Filter_lbl.Text))
+                if (!string.IsNullOrEmpty(Filter_textBox.Text))
                 {
-                    List<BE.Prestador> filteredList = prestadores.FindAll(p => p.Nombre.Contains(Filter_lbl.Text));
+                    prestadores.ForEach(p =>
+                    {
+                        if (p.Nombre.Contains(Filter_textBox.Text.ToUpper()))
+                        {
+                            filteredList.Add(p);
+                        }
+                    });
                     LoadPrestadores(filteredList);
                 }
                 else MessageBox.Show("El campo de busqueda vacio!!!");
             }
         }
 
+        // Filter
+        // Filter Operations
         private void RadioButtonsObserver()
         {
             if (Option03_radioButton.Checked)
@@ -95,11 +115,21 @@ namespace UI
             RadioButtonsObserver();
         }
 
+
+        // Filter Buttons
         private void Filt_btn_Click(object sender, EventArgs e)
         {
             FiltPrestadores();
         }
 
+        private void Rollback_btn_Click(object sender, EventArgs e)
+        {
+            Option01_radioButton.Checked = true;
+            FiltPrestadores();
+        }
+
+        // Prestadores
+        // Prestadores buttons
         private void NuevoPrestador_btn_Click(object sender, EventArgs e)
         {
             frmNuevoPrestador form = new frmNuevoPrestador(servicePrestador, prestadores);
@@ -111,5 +141,7 @@ namespace UI
         {
 
         }
+
+        
     }
 }

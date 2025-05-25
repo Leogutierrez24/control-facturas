@@ -58,10 +58,14 @@
             // 
             // Prestadores_dataGridView
             // 
+            this.Prestadores_dataGridView.AllowUserToResizeColumns = false;
+            this.Prestadores_dataGridView.AllowUserToResizeRows = false;
             this.Prestadores_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Prestadores_dataGridView.Location = new System.Drawing.Point(12, 25);
+            this.Prestadores_dataGridView.MultiSelect = false;
             this.Prestadores_dataGridView.Name = "Prestadores_dataGridView";
-            this.Prestadores_dataGridView.Size = new System.Drawing.Size(424, 627);
+            this.Prestadores_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Prestadores_dataGridView.Size = new System.Drawing.Size(667, 627);
             this.Prestadores_dataGridView.TabIndex = 0;
             // 
             // label1
@@ -100,7 +104,7 @@
             this.groupBox1.Controls.Add(this.Option03_radioButton);
             this.groupBox1.Controls.Add(this.Option02_radioButton);
             this.groupBox1.Controls.Add(this.Option01_radioButton);
-            this.groupBox1.Location = new System.Drawing.Point(442, 25);
+            this.groupBox1.Location = new System.Drawing.Point(685, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(352, 87);
             this.groupBox1.TabIndex = 5;
@@ -115,6 +119,7 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "Revertir";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.Rollback_btn_Click);
             // 
             // Filt_btn
             // 
@@ -179,7 +184,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(543, 118);
+            this.button4.Location = new System.Drawing.Point(786, 118);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(95, 40);
             this.button4.TabIndex = 6;
@@ -190,7 +195,7 @@
             // 
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Location = new System.Drawing.Point(442, 185);
+            this.groupBox2.Location = new System.Drawing.Point(685, 185);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(147, 125);
             this.groupBox2.TabIndex = 7;
@@ -201,7 +206,7 @@
             // 
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Location = new System.Drawing.Point(595, 185);
+            this.groupBox3.Location = new System.Drawing.Point(838, 185);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(147, 125);
             this.groupBox3.TabIndex = 8;
@@ -230,7 +235,7 @@
             // 
             this.groupBox4.Controls.Add(this.button7);
             this.groupBox4.Controls.Add(this.button8);
-            this.groupBox4.Location = new System.Drawing.Point(748, 185);
+            this.groupBox4.Location = new System.Drawing.Point(991, 185);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(147, 125);
             this.groupBox4.TabIndex = 9;
@@ -257,7 +262,7 @@
             // 
             // NuevoPrestador_btn
             // 
-            this.NuevoPrestador_btn.Location = new System.Drawing.Point(442, 118);
+            this.NuevoPrestador_btn.Location = new System.Drawing.Point(685, 118);
             this.NuevoPrestador_btn.Name = "NuevoPrestador_btn";
             this.NuevoPrestador_btn.Size = new System.Drawing.Size(95, 40);
             this.NuevoPrestador_btn.TabIndex = 10;
@@ -269,7 +274,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 677);
+            this.ClientSize = new System.Drawing.Size(1148, 675);
             this.Controls.Add(this.NuevoPrestador_btn);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -278,7 +283,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Prestadores_dataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de Facturación OSDEL";
             this.Load += new System.EventHandler(this.frmHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Prestadores_dataGridView)).EndInit();
