@@ -2,9 +2,9 @@
 {
     public enum OperacionPago
     {
+        PagoExcedente = -1,
         Exito = 0,
-        SaldoPendiente = 1,
-        SaldoFavor = 2,
-        PagoRepetido = 3,
+        FacturaCancelada = 1,
+        FacturaRechazada = 2,
     }
 }

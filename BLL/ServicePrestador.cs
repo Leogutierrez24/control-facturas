@@ -47,7 +47,22 @@ namespace BLL
 
             if (prestador.Facturas.Count > 0)
             {
+                prestador.Facturas.ForEach(factura =>
+                {
+                    if (factura.Estado == BE.EstadoFactura.Pendiente) result++;
+                });
+            }
 
+            return result;
+        }
+
+        public int CountFacturasPorVencer(BE.Prestador prestador)
+        {
+            int result = 0;
+
+            if (prestador.Facturas.Count > 0)
+            {
+                
             }
 
             return result;

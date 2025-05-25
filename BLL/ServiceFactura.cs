@@ -55,52 +55,96 @@ namespace BLL
             return mapper.SelectById(id);
         }
 
+        // Queda pendiente impactar los debitos en la base de datos.
         public OperacionDebito AddDebito(BE.Factura factura, BE.Debito debito)
         {
             OperacionDebito resultado;
-            if (factura.Debitos.Count == 0)
+            if (factura.Debitos.Count == 0) // Si no hay debitos registrados
             {
-                if (factura.Monto >= debito.Monto)
+                if (debito.Monto <= factura.Monto)
                 {
                     factura.Debitos.Add(debito);
+                    factura.Estado = (debito.Monto == factura.Monto) ? EstadoFactura.Rechazada : EstadoFactura.Pendiente;
                     resultado = OperacionDebito.Exito;
                 }
-                else resultado = OperacionDebito.SaldoNegativo;
+                else resultado = OperacionDebito.DebitoExcedente;
             }
-            else if (factura.Debitos.Find(item => item.ID == debito.ID) == null)
+            else // Si hay debitos registrados
             {
                 float totalDebitado = 0;
                 factura.Debitos.ForEach(item => totalDebitado += item.Monto);
 
-                if (factura.Monto >= (totalDebitado + debito.Monto))
+                if ((totalDebitado + debito.Monto) <= factura.Monto)
                 {
                     factura.Debitos.Add(debito);
+                    factura.Estado = ((totalDebitado + debito.Monto) == factura.Monto) ? EstadoFactura.Rechazada : EstadoFactura.Pendiente;
                     resultado = OperacionDebito.Exito;
                 }
-                else resultado = OperacionDebito.SaldoNegativo;
+                else resultado = OperacionDebito.DebitoExcedente;
             }
-            else resultado = OperacionDebito.DebitoRepetido;
             return resultado;
         }
 
+        // Queda pendiente impactar los pagos en la base de datos.
         public OperacionPago AddPago(BE.Factura factura, BE.Pago pago)
         {
             OperacionPago resultado;
-            if (factura.Pagos.Count == 0)
+
+            if (factura.Estado == EstadoFactura.Pendiente)
             {
-                factura.Pagos.Add(pago);
-                if (factura.Monto < pago.Monto) resultado = OperacionPago.SaldoFavor;
-                else resultado = OperacionPago.Exito;
-            }
-            else if (factura.Pagos.Find(item => item.ID == pago.ID) == null)
+                if (factura.Debitos.Count != 0 && factura.Pagos.Count == 0) // Si hay debitos pero no hay pagos.
+                {
+                    float totalDebitado = 0;
+                    factura.Debitos.ForEach(d => totalDebitado += d.Monto);
+
+                    if ((totalDebitado + pago.Monto) == factura.Monto)
+                    {
+                        factura.Pagos.Add(pago);
+                        factura.Estado = EstadoFactura.Paga;
+                        resultado = OperacionPago.Exito;
+                    }
+                    else resultado = OperacionPago.PagoExcedente;
+                }
+                else if (factura.Debitos.Count != 0 && factura.Pagos.Count != 0) // Si hay debitos y pagos.
+                {
+                    float totalDebitado = 0;
+                    float totalPagado = 0;
+                    factura.Debitos.ForEach(d => totalDebitado += d.Monto);
+                    factura.Pagos.ForEach(p => totalPagado += p.Monto);
+
+                    if ((totalDebitado + totalPagado) < factura.Monto && (totalDebitado + totalPagado + pago.Monto) <= factura.Monto)
+                    {
+                        factura.Pagos.Add(pago);
+                        factura.Estado = (totalDebitado + totalPagado + pago.Monto) == factura.Monto ? EstadoFactura.Paga : EstadoFactura.Pendiente;
+                        resultado = OperacionPago.Exito;
+                    }
+                    else resultado = OperacionPago.PagoExcedente;
+                } else if (factura.Debitos.Count == 0 && factura.Pagos.Count != 0) // Si hay pagos pero no hay debitos.
+                {
+                    float totalPagado = 0;
+                    factura.Pagos.ForEach(p => totalPagado += p.Monto);
+
+                    if ((totalPagado + pago.Monto) <= factura.Monto)
+                    {
+                        factura.Pagos.Add(pago);
+                        factura.Estado = (totalPagado + pago.Monto) == factura.Monto ? EstadoFactura.Paga : EstadoFactura.Pendiente;
+                        resultado = OperacionPago.Exito;
+                    }
+                    else resultado = OperacionPago.PagoExcedente;
+                } else // Si no hay debitos ni pagos
+                {
+                    factura.Pagos.Add(pago);
+                    factura.Estado = pago.Monto == factura.Monto ? EstadoFactura.Paga : EstadoFactura.Pendiente;
+                    resultado = OperacionPago.Exito;
+                }
+            } else if (factura.Estado == EstadoFactura.Paga)
             {
-                float totalPagado = 0;
-                factura.Pagos.ForEach(item => totalPagado += item.Monto);
-                if (factura.Monto < (totalPagado + pago.Monto)) resultado = OperacionPago.SaldoFavor;
-                else resultado = OperacionPago.Exito;
-                factura.Pagos.Add(pago);
+                resultado = OperacionPago.FacturaCancelada;
+            } else
+            {
+                resultado = OperacionPago.FacturaRechazada;
             }
-            else resultado = OperacionPago.PagoRepetido;
+
             return resultado;
         }
     }

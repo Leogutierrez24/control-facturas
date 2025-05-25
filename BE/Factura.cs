@@ -78,5 +78,13 @@ namespace BE
 			set { pagos = value; }
 		}
 
+		private EstadoFactura estado;
+		public EstadoFactura Estado
+		{
+			get { return estado; }
+			set { estado = value; }
+		}
+
+
 	}
 }

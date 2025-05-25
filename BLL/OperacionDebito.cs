@@ -2,8 +2,7 @@
 {
     public enum OperacionDebito
     {
+        DebitoExcedente = -1,
         Exito = 0,
-        SaldoNegativo = 1,
-        DebitoRepetido = 2,
     }
 }
