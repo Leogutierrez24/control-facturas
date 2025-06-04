@@ -30,8 +30,8 @@
         {
             this.Prestadores_dataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.CargarFactura_btn = new System.Windows.Forms.Button();
+            this.BuscarFactura_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
             this.Filt_btn = new System.Windows.Forms.Button();
@@ -43,11 +43,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.CargarPago_btn = new System.Windows.Forms.Button();
+            this.BuscarPago_btn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.CargarDebito_btn = new System.Windows.Forms.Button();
+            this.BuscarDebito_btn = new System.Windows.Forms.Button();
             this.NuevoPrestador_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Prestadores_dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -77,23 +77,24 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Listado de Prestadores";
             // 
-            // button1
+            // CargarFactura_btn
             // 
-            this.button1.Location = new System.Drawing.Point(26, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cargar Factura";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CargarFactura_btn.Location = new System.Drawing.Point(26, 19);
+            this.CargarFactura_btn.Name = "CargarFactura_btn";
+            this.CargarFactura_btn.Size = new System.Drawing.Size(92, 36);
+            this.CargarFactura_btn.TabIndex = 2;
+            this.CargarFactura_btn.Text = "Cargar Factura";
+            this.CargarFactura_btn.UseVisualStyleBackColor = true;
+            this.CargarFactura_btn.Click += new System.EventHandler(this.CargarFactura_btn_Click);
             // 
-            // button2
+            // BuscarFactura_btn
             // 
-            this.button2.Location = new System.Drawing.Point(26, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 36);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Buscar Factura";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BuscarFactura_btn.Location = new System.Drawing.Point(26, 72);
+            this.BuscarFactura_btn.Name = "BuscarFactura_btn";
+            this.BuscarFactura_btn.Size = new System.Drawing.Size(92, 36);
+            this.BuscarFactura_btn.TabIndex = 3;
+            this.BuscarFactura_btn.Text = "Buscar Factura";
+            this.BuscarFactura_btn.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -193,8 +194,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.CargarFactura_btn);
+            this.groupBox2.Controls.Add(this.BuscarFactura_btn);
             this.groupBox2.Location = new System.Drawing.Point(685, 185);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(147, 125);
@@ -204,8 +205,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.CargarPago_btn);
+            this.groupBox3.Controls.Add(this.BuscarPago_btn);
             this.groupBox3.Location = new System.Drawing.Point(838, 185);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(147, 125);
@@ -213,28 +214,28 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pagos";
             // 
-            // button5
+            // CargarPago_btn
             // 
-            this.button5.Location = new System.Drawing.Point(26, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(92, 36);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Cargar Pago";
-            this.button5.UseVisualStyleBackColor = true;
+            this.CargarPago_btn.Location = new System.Drawing.Point(26, 19);
+            this.CargarPago_btn.Name = "CargarPago_btn";
+            this.CargarPago_btn.Size = new System.Drawing.Size(92, 36);
+            this.CargarPago_btn.TabIndex = 2;
+            this.CargarPago_btn.Text = "Cargar Pago";
+            this.CargarPago_btn.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // BuscarPago_btn
             // 
-            this.button6.Location = new System.Drawing.Point(26, 72);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(92, 36);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Buscar Pago";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BuscarPago_btn.Location = new System.Drawing.Point(26, 72);
+            this.BuscarPago_btn.Name = "BuscarPago_btn";
+            this.BuscarPago_btn.Size = new System.Drawing.Size(92, 36);
+            this.BuscarPago_btn.TabIndex = 3;
+            this.BuscarPago_btn.Text = "Buscar Pago";
+            this.BuscarPago_btn.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button7);
-            this.groupBox4.Controls.Add(this.button8);
+            this.groupBox4.Controls.Add(this.CargarDebito_btn);
+            this.groupBox4.Controls.Add(this.BuscarDebito_btn);
             this.groupBox4.Location = new System.Drawing.Point(991, 185);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(147, 125);
@@ -242,23 +243,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Debitos";
             // 
-            // button7
+            // CargarDebito_btn
             // 
-            this.button7.Location = new System.Drawing.Point(26, 19);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(92, 36);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Cargar Debito";
-            this.button7.UseVisualStyleBackColor = true;
+            this.CargarDebito_btn.Location = new System.Drawing.Point(26, 19);
+            this.CargarDebito_btn.Name = "CargarDebito_btn";
+            this.CargarDebito_btn.Size = new System.Drawing.Size(92, 36);
+            this.CargarDebito_btn.TabIndex = 2;
+            this.CargarDebito_btn.Text = "Cargar Debito";
+            this.CargarDebito_btn.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // BuscarDebito_btn
             // 
-            this.button8.Location = new System.Drawing.Point(26, 72);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(92, 36);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "Buscar Debito";
-            this.button8.UseVisualStyleBackColor = true;
+            this.BuscarDebito_btn.Location = new System.Drawing.Point(26, 72);
+            this.BuscarDebito_btn.Name = "BuscarDebito_btn";
+            this.BuscarDebito_btn.Size = new System.Drawing.Size(92, 36);
+            this.BuscarDebito_btn.TabIndex = 3;
+            this.BuscarDebito_btn.Text = "Buscar Debito";
+            this.BuscarDebito_btn.UseVisualStyleBackColor = true;
             // 
             // NuevoPrestador_btn
             // 
@@ -304,8 +305,8 @@
 
         private System.Windows.Forms.DataGridView Prestadores_dataGridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CargarFactura_btn;
+        private System.Windows.Forms.Button BuscarFactura_btn;
         private System.Windows.Forms.Button CargarPrestador_btn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox Filter_textBox;
@@ -316,11 +317,11 @@
         private System.Windows.Forms.Label Filter_lbl;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button CargarPago_btn;
+        private System.Windows.Forms.Button BuscarPago_btn;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button CargarDebito_btn;
+        private System.Windows.Forms.Button BuscarDebito_btn;
         private System.Windows.Forms.Button Filt_btn;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button NuevoPrestador_btn;

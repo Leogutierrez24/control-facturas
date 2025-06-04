@@ -52,6 +52,7 @@ namespace BLL
                     if (factura.Estado == BE.EstadoFactura.Pendiente) result++;
                 });
             }
+            prestador.FacturasPendientes = result;
 
             return result;
         }

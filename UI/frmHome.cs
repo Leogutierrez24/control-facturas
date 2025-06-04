@@ -24,6 +24,7 @@ namespace UI
             LoadPrestadores();
         }
 
+        // Prestadores Lists
         private void ConfigDataGridView()
         {
             Prestadores_dataGridView.Columns[0].Visible = false;
@@ -142,6 +143,10 @@ namespace UI
 
         }
 
-        
+        private void CargarFactura_btn_Click(object sender, EventArgs e)
+        {
+            frmCargarFactura form = new frmCargarFactura(prestadores);
+            form.ShowDialog();
+        }
     }
 }

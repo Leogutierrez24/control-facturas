@@ -36,5 +36,13 @@ namespace BE
 			set { facturas = value; }
 		}
 
+		private int facturasPendiente;
+		public int FacturasPendientes
+		{
+			get { return facturasPendiente; }
+			set { facturasPendiente = value; }
+		}
+
+
 	}
 }
