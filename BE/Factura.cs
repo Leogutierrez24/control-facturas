@@ -85,6 +85,17 @@ namespace BE
 			set { estado = value; }
 		}
 
+		public Factura() { }
 
+		public Factura(Prestador prestador, int puntoVenta, int numero, DateTime fechaCreacion, DateTime fechaRecepcion, float monto, string observacion = "")
+		{
+			this.prestador = prestador;
+			this.puntoVenta = puntoVenta;
+			this.numero = numero;
+			this.fechaCreacion = fechaCreacion;
+			this.fechaRecepcion = fechaRecepcion;
+			this.monto = monto;
+			this.observacion = observacion;
+		}
 	}
 }

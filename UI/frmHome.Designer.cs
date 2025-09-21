@@ -64,6 +64,7 @@
             this.Prestadores_dataGridView.Location = new System.Drawing.Point(12, 25);
             this.Prestadores_dataGridView.MultiSelect = false;
             this.Prestadores_dataGridView.Name = "Prestadores_dataGridView";
+            this.Prestadores_dataGridView.ReadOnly = true;
             this.Prestadores_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Prestadores_dataGridView.Size = new System.Drawing.Size(667, 627);
             this.Prestadores_dataGridView.TabIndex = 0;

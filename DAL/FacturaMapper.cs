@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
@@ -126,7 +127,7 @@ namespace DAL
 
         public Resultado<List<Factura>> SelectByNumero(int numero, int prestadorID)
         {
-            List<Factura> facturasList = new List<Factura>();
+            List<Factura> facturasList;
             Resultado<List<Factura>> result;
             SQLiteParameter numeroParam = _con.CreateParameter(numero, "numero");
             SQLiteParameter prestadorIDParam = _con.CreateParameter(prestadorID, "prestadorID");
@@ -142,6 +143,23 @@ namespace DAL
             {
                 result = new Resultado<List<Factura>>(true, facturasList);
             } else result = new Resultado<List<Factura>>(false, null);
+            return result;
+        }
+
+        public bool Exists(int puntoVenta, int numero, int prestadorID)
+        {
+            bool result = false;
+            SQLiteParameter numeroParam = _con.CreateParameter(numero, "numero");
+            SQLiteParameter puntoVentaParam = _con.CreateParameter(puntoVenta, "puntoVenta");
+            SQLiteParameter prestadorIdParam = _con.CreateParameter(prestadorID, "prestadorID");
+            string query = "SELECT * FROM facturas WHERE id_prestador=@prestadorID AND punto_venta=@puntoVenta AND numero=@numero;";
+
+            _con.Connect();
+            DataTable data = _con.Read(query, new List<SQLiteParameter> { numeroParam, puntoVentaParam, prestadorIdParam });
+            _con.Disconnect();
+
+            if (data.Rows.Count > 0) result = true;
+
             return result;
         }
 

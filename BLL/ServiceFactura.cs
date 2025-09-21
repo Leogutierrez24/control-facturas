@@ -30,16 +30,14 @@ namespace BLL
         public int Load(Factura factura, Prestador prestador)
         {
             int result = 0;
-            Resultado<List<Factura>> queryResult = mapper.SelectByNumero(factura.Numero, prestador.ID);
-            if (queryResult.Value != null)
+            bool repeatedFactura = mapper.Exists(factura.PuntoVenta, factura.Numero, prestador.ID);
+            
+            if (repeatedFactura)
             {
-                if (queryResult.Value.Exists(f => f.PuntoVenta == factura.PuntoVenta))
-                {
-                    result = -1;
-                }
+                result = -1; // Factura repetida.
             } else
             {
-                mapper.Insert(factura);
+                mapper.Insert(factura); // No existe la factura.
             }
             return result;
         }
