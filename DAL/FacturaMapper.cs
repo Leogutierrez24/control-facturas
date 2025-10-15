@@ -1,4 +1,5 @@
 ﻿using BE;
+using BE.exceptions;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -76,8 +77,6 @@ namespace DAL
 
         public override int Insert(Factura obj)
         {
-            int result;
-
             SQLiteParameter prestadorIDParam = _con.CreateParameter(obj.Prestador.ID, "prestadorID");
             SQLiteParameter puntoVentaParam = _con.CreateParameter(obj.PuntoVenta, "puntoVenta");
             SQLiteParameter numeroParam = _con.CreateParameter(obj.Numero, "numero");
@@ -85,10 +84,7 @@ namespace DAL
             SQLiteParameter fechaRecepcionParam = _con.CreateParameter(obj.FechaRecepcion.ToString(), "fechaRecepcion");
             SQLiteParameter montoParam = _con.CreateParameter(obj.Monto, "monto");
             SQLiteParameter observacionesParam = _con.CreateParameter(obj.Observacion, "observaciones");
-            string query = "INSERT INTO facturas (id_prestador, punto_venta, numero, fecha_creacion, fecha_recepcion, monto, observaciones) VALUES (@prestadorID, @puntoVenta, @numero, @fechaCreacion, @fechaRecepcion, @monto, @observaciones);";
-
-            _con.Connect();
-            result = _con.Write(query, new List<SQLiteParameter>
+            List<SQLiteParameter> parametersList = new List<SQLiteParameter>
             {
                 prestadorIDParam,
                 puntoVentaParam,
@@ -97,10 +93,20 @@ namespace DAL
                 fechaRecepcionParam,
                 montoParam,
                 observacionesParam
-            });
-            _con.Disconnect();
+            };
 
-            return result;
+            string query = "INSERT INTO facturas (id_prestador, punto_venta, numero, fecha_creacion, fecha_recepcion, monto, observaciones) VALUES (@prestadorID, @puntoVenta, @numero, @fechaCreacion, @fechaRecepcion, @monto, @observaciones);";
+
+            bool isDuplicate = Exists(new List<SQLiteParameter> { prestadorIDParam, puntoVentaParam, numeroParam });
+
+            if (!isDuplicate)
+            {
+                _con.Connect();
+                _con.Write(query, parametersList);
+                _con.Disconnect();
+            }
+            else throw new DuplicateFacturaException();
+            return 0;
         }
 
         public override BE.Resultado<BE.Factura> SelectById(int id)
@@ -146,21 +152,19 @@ namespace DAL
             return result;
         }
 
-        public bool Exists(int puntoVenta, int numero, int prestadorID)
+        /// <summary>
+        /// Check if the Factura exists.
+        /// </summary>
+        /// <returns><c>true</c> if the factura exists; otherwise, <c>false</c>.</returns>
+        public bool Exists(List<SQLiteParameter> parametersList)
         {
-            bool result = false;
-            SQLiteParameter numeroParam = _con.CreateParameter(numero, "numero");
-            SQLiteParameter puntoVentaParam = _con.CreateParameter(puntoVenta, "puntoVenta");
-            SQLiteParameter prestadorIdParam = _con.CreateParameter(prestadorID, "prestadorID");
-            string query = "SELECT * FROM facturas WHERE id_prestador=@prestadorID AND punto_venta=@puntoVenta AND numero=@numero;";
+            string query = "SELECT 1 FROM facturas WHERE id_prestador=@prestadorID AND punto_venta=@puntoVenta AND numero=@numero;";
 
             _con.Connect();
-            DataTable data = _con.Read(query, new List<SQLiteParameter> { numeroParam, puntoVentaParam, prestadorIdParam });
+            int result = _con.CheckDuplicate(query, parametersList);
             _con.Disconnect();
 
-            if (data.Rows.Count > 0) result = true;
-
-            return result;
+            return result == 1;
         }
 
         public List<BE.Factura> SelectAllByPrestador(int id)

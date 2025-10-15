@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BE.exceptions;
 
 namespace BLL
 {
@@ -27,18 +28,24 @@ namespace BLL
             return instance;
         }
 
-        public int Load(Factura factura, Prestador prestador)
+        public bool Load(Factura factura, Prestador prestador)
         {
-            int result = 0;
-            bool repeatedFactura = mapper.Exists(factura.PuntoVenta, factura.Numero, prestador.ID);
-            
-            if (repeatedFactura)
+            bool result = false;
+
+            try
             {
-                result = -1; // Factura repetida.
-            } else
-            {
-                mapper.Insert(factura); // No existe la factura.
+                mapper.Insert(factura);
+                result = true;
             }
+            catch (DuplicateFacturaException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             return result;
         }
 

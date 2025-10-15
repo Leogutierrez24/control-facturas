@@ -113,6 +113,22 @@ namespace DAL
             return table;
         }
 
+        public int CheckDuplicate(string query, List<SQLiteParameter> parameters = null)
+        {
+            int result;
+            SQLiteCommand command = CreateCommand(query, parameters);
+            try
+            {
+                result = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                result = -1;
+                Console.WriteLine(ex.Message);
+            }
+            return result;
+        }
+
         public int Write(string query, List<SQLiteParameter> parameters = null)
         {
             int result;

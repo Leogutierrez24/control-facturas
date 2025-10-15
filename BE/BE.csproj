@@ -63,6 +63,7 @@
     <Compile Include="Debito.cs" />
     <Compile Include="EstadoDebito.cs" />
     <Compile Include="EstadoFactura.cs" />
+    <Compile Include="exceptions\DuplicateFacturaException.cs" />
     <Compile Include="Factura.cs" />
     <Compile Include="Pago.cs" />
     <Compile Include="Prestador.cs" />

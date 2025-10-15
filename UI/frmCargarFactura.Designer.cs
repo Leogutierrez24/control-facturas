@@ -181,17 +181,19 @@
             // 
             // FechaRecepcion_dateTimePicker
             // 
+            this.FechaRecepcion_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaRecepcion_dateTimePicker.Location = new System.Drawing.Point(510, 184);
             this.FechaRecepcion_dateTimePicker.Name = "FechaRecepcion_dateTimePicker";
-            this.FechaRecepcion_dateTimePicker.Size = new System.Drawing.Size(213, 20);
+            this.FechaRecepcion_dateTimePicker.Size = new System.Drawing.Size(157, 20);
             this.FechaRecepcion_dateTimePicker.TabIndex = 12;
             this.FechaRecepcion_dateTimePicker.ValueChanged += new System.EventHandler(this.FechaRecepcion_dateTimePicker_ValueChanged);
             // 
             // FechaFactura_dateTimePicker
             // 
+            this.FechaFactura_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaFactura_dateTimePicker.Location = new System.Drawing.Point(510, 131);
             this.FechaFactura_dateTimePicker.Name = "FechaFactura_dateTimePicker";
-            this.FechaFactura_dateTimePicker.Size = new System.Drawing.Size(213, 20);
+            this.FechaFactura_dateTimePicker.Size = new System.Drawing.Size(157, 20);
             this.FechaFactura_dateTimePicker.TabIndex = 14;
             this.FechaFactura_dateTimePicker.ValueChanged += new System.EventHandler(this.FechaFactura_dateTimePicker_ValueChanged);
             // 
@@ -223,7 +225,7 @@
             0,
             0});
             this.Monto_numericUpDown.Name = "Monto_numericUpDown";
-            this.Monto_numericUpDown.Size = new System.Drawing.Size(213, 20);
+            this.Monto_numericUpDown.Size = new System.Drawing.Size(157, 20);
             this.Monto_numericUpDown.TabIndex = 16;
             this.Monto_numericUpDown.ValueChanged += new System.EventHandler(this.Monto_numericUpDown_ValueChanged);
             // 
@@ -276,12 +278,11 @@
             // 
             // ErrorMessage_label
             // 
-            this.ErrorMessage_label.AutoSize = true;
             this.ErrorMessage_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorMessage_label.ForeColor = System.Drawing.Color.IndianRed;
             this.ErrorMessage_label.Location = new System.Drawing.Point(507, 304);
             this.ErrorMessage_label.Name = "ErrorMessage_label";
-            this.ErrorMessage_label.Size = new System.Drawing.Size(102, 13);
+            this.ErrorMessage_label.Size = new System.Drawing.Size(262, 166);
             this.ErrorMessage_label.TabIndex = 21;
             this.ErrorMessage_label.Text = "Mensaje de error";
             // 

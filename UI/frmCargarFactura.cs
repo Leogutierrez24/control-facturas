@@ -22,12 +22,15 @@ namespace UI
         private float monto;
         private string observaciones = "";
 
+        private readonly BLL.ServiceFactura serviceFactura;
+
         public frmCargarFactura(List<BE.Prestador> prestadores)
         {
             InitializeComponent();
             this.prestadores = prestadores;
             ChargePrestadores(prestadores);
             SetDateTimes();
+            serviceFactura = BLL.ServiceFactura.GetInstance();
         }
 
         void ChargePrestadores(List<BE.Prestador> list)
@@ -97,7 +100,7 @@ namespace UI
 
         private void PuntoVenta_checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (PuntoVenta_checkBox.Checked == true)
+            if (PuntoVenta_checkBox.Checked)
             {
                 PuntoVenta_textBox.Text = "";
                 PuntoVenta_textBox.Enabled = false;
@@ -105,6 +108,7 @@ namespace UI
             } else
             {
                 PuntoVenta_textBox.Enabled = true;
+                puntoVenta = string.IsNullOrEmpty(PuntoVenta_textBox.Text) ? 0 : int.Parse(PuntoVenta_textBox.Text); 
             }
         }
         
@@ -174,7 +178,7 @@ namespace UI
                 int id = Convert.ToInt32(Prestadores_dataGridView.SelectedRows[0].Cells["id"].Value);
                 BE.Prestador selectedPrestador = prestadores.Find(p => p.ID == id);
 
-                if (!PuntoVenta_checkBox.Checked && puntoVenta == 0)
+                if ((!PuntoVenta_checkBox.Checked && puntoVenta != 0) || (PuntoVenta_checkBox.Checked && puntoVenta == 0))
                 {
                     if (numeroFactura > 0)
                     {
@@ -188,6 +192,17 @@ namespace UI
                                 fechaIngreso,
                                 monto,
                                 observaciones);
+
+                            using(frmNewFacturaPreview from = new frmNewFacturaPreview(nuevaFactura))
+                            {
+                                var result = from.ShowDialog(this);
+                                if (result == DialogResult.OK)
+                                {
+                                    MessageBox.Show("Factura Creada!");
+                                    this.Close();
+                                }
+                            }
+                            
                         }
                         else ShowErrorMessage(true, "El monto invalido.");
                     }
