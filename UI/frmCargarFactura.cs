@@ -184,7 +184,7 @@ namespace UI
                     {
                         if (Monto_numericUpDown.Value > 0)
                         {
-                            BE.Factura nuevaFactura = new BE.Factura(
+                            BE.Factura newFactura = new BE.Factura(
                                 selectedPrestador,
                                 puntoVenta,
                                 numeroFactura,
@@ -193,16 +193,21 @@ namespace UI
                                 monto,
                                 observaciones);
 
-                            using(frmNewFacturaPreview from = new frmNewFacturaPreview(nuevaFactura))
+                            using(frmNewFacturaPreview from = new frmNewFacturaPreview(newFactura))
                             {
                                 var result = from.ShowDialog(this);
                                 if (result == DialogResult.OK)
                                 {
-                                    MessageBox.Show("Factura Creada!");
-                                    this.Close();
+                                    bool facturaLoaded = serviceFactura.Load(newFactura, selectedPrestador);
+
+                                    if (facturaLoaded)
+                                    {
+                                        MessageBox.Show("Factura Creada!");
+                                        this.Close();
+                                    }
+                                    else MessageBox.Show("Ups! Algo salio mal.");
                                 }
                             }
-                            
                         }
                         else ShowErrorMessage(true, "El monto invalido.");
                     }
@@ -223,6 +228,11 @@ namespace UI
             Monto_numericUpDown.Value = 0;
             FechaFactura_dateTimePicker.Value = DateTime.Now;
             FechaRecepcion_dateTimePicker.Value = DateTime.Now;
+        }
+
+        private void onTextChanged_Observaciones(object sender, EventArgs e)
+        {
+            observaciones = Observaciones_textBox.Text;
         }
 
         private void Prestadores_dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

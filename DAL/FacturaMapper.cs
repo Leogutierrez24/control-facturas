@@ -81,9 +81,10 @@ namespace DAL
             SQLiteParameter puntoVentaParam = _con.CreateParameter(obj.PuntoVenta, "puntoVenta");
             SQLiteParameter numeroParam = _con.CreateParameter(obj.Numero, "numero");
             SQLiteParameter fechaCreacionParam = _con.CreateParameter(obj.FechaCreacion.ToShortDateString(), "fechaCreacion");
-            SQLiteParameter fechaRecepcionParam = _con.CreateParameter(obj.FechaRecepcion.ToString(), "fechaRecepcion");
+            SQLiteParameter fechaRecepcionParam = _con.CreateParameter(obj.FechaRecepcion.ToShortDateString(), "fechaRecepcion");
             SQLiteParameter montoParam = _con.CreateParameter(obj.Monto, "monto");
             SQLiteParameter observacionesParam = _con.CreateParameter(obj.Observacion, "observaciones");
+            SQLiteParameter estadoIDParam = _con.CreateParameter(1, "estado");
             List<SQLiteParameter> parametersList = new List<SQLiteParameter>
             {
                 prestadorIDParam,
@@ -92,10 +93,11 @@ namespace DAL
                 fechaCreacionParam,
                 fechaRecepcionParam,
                 montoParam,
-                observacionesParam
+                observacionesParam,
+                estadoIDParam
             };
 
-            string query = "INSERT INTO facturas (id_prestador, punto_venta, numero, fecha_creacion, fecha_recepcion, monto, observaciones) VALUES (@prestadorID, @puntoVenta, @numero, @fechaCreacion, @fechaRecepcion, @monto, @observaciones);";
+            string query = "INSERT INTO facturas (id_prestador, punto_venta, numero, fecha_creacion, fecha_recepcion, monto, observaciones, id_estado) VALUES (@prestadorID, @puntoVenta, @numero, @fechaCreacion, @fechaRecepcion, @monto, @observaciones, @estado);";
 
             bool isDuplicate = Exists(new List<SQLiteParameter> { prestadorIDParam, puntoVentaParam, numeroParam });
 

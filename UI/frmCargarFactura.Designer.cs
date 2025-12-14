@@ -245,6 +245,7 @@
             this.Observaciones_textBox.Name = "Observaciones_textBox";
             this.Observaciones_textBox.Size = new System.Drawing.Size(464, 169);
             this.Observaciones_textBox.TabIndex = 5;
+            this.Observaciones_textBox.TextChanged += new System.EventHandler(this.onTextChanged_Observaciones);
             // 
             // LoadFactura_button
             // 

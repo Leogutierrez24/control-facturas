@@ -90,6 +90,12 @@
     <Compile Include="frmNuevoPrestador.Designer.cs">
       <DependentUpon>frmNuevoPrestador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSearchFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchFactura.Designer.cs">
+      <DependentUpon>frmSearchFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCargarFactura.resx">
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoPrestador.resx">
       <DependentUpon>frmNuevoPrestador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchFactura.resx">
+      <DependentUpon>frmSearchFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

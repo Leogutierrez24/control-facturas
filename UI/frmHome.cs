@@ -143,10 +143,16 @@ namespace UI
 
         }
 
+        // Facturas buttons
         private void CargarFactura_btn_Click(object sender, EventArgs e)
         {
             frmCargarFactura form = new frmCargarFactura(prestadores);
             form.ShowDialog();
+        }
+
+        private void BuscarFactura_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

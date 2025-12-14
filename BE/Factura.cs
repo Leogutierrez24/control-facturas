@@ -96,6 +96,7 @@ namespace BE
 			this.fechaRecepcion = fechaRecepcion;
 			this.monto = monto;
 			this.observacion = observacion;
-		}
+			this.estado = EstadoFactura.Pendiente;
+        }
 	}
 }

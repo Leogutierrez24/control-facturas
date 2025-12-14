@@ -32,28 +32,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CargarFactura_btn = new System.Windows.Forms.Button();
             this.BuscarFactura_btn = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.PrestadoresFiltro_groupBox = new System.Windows.Forms.GroupBox();
+            this.Reset_btn = new System.Windows.Forms.Button();
             this.Filt_btn = new System.Windows.Forms.Button();
             this.Filter_lbl = new System.Windows.Forms.Label();
             this.Filter_textBox = new System.Windows.Forms.TextBox();
             this.Option03_radioButton = new System.Windows.Forms.RadioButton();
             this.Option02_radioButton = new System.Windows.Forms.RadioButton();
             this.Option01_radioButton = new System.Windows.Forms.RadioButton();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.VerPrestador_btn = new System.Windows.Forms.Button();
+            this.Facturacion_groupBox = new System.Windows.Forms.GroupBox();
+            this.Pagos_groupBox = new System.Windows.Forms.GroupBox();
             this.CargarPago_btn = new System.Windows.Forms.Button();
             this.BuscarPago_btn = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Debitos_groupBox = new System.Windows.Forms.GroupBox();
             this.CargarDebito_btn = new System.Windows.Forms.Button();
             this.BuscarDebito_btn = new System.Windows.Forms.Button();
             this.NuevoPrestador_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Prestadores_dataGridView)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.PrestadoresFiltro_groupBox.SuspendLayout();
+            this.Facturacion_groupBox.SuspendLayout();
+            this.Pagos_groupBox.SuspendLayout();
+            this.Debitos_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // Prestadores_dataGridView
@@ -96,32 +96,33 @@
             this.BuscarFactura_btn.TabIndex = 3;
             this.BuscarFactura_btn.Text = "Buscar Factura";
             this.BuscarFactura_btn.UseVisualStyleBackColor = true;
+            this.BuscarFactura_btn.Click += new System.EventHandler(this.BuscarFactura_btn_Click);
             // 
-            // groupBox1
+            // PrestadoresFiltro_groupBox
             // 
-            this.groupBox1.Controls.Add(this.button9);
-            this.groupBox1.Controls.Add(this.Filt_btn);
-            this.groupBox1.Controls.Add(this.Filter_lbl);
-            this.groupBox1.Controls.Add(this.Filter_textBox);
-            this.groupBox1.Controls.Add(this.Option03_radioButton);
-            this.groupBox1.Controls.Add(this.Option02_radioButton);
-            this.groupBox1.Controls.Add(this.Option01_radioButton);
-            this.groupBox1.Location = new System.Drawing.Point(685, 25);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(352, 87);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtrar Prestadores";
+            this.PrestadoresFiltro_groupBox.Controls.Add(this.Reset_btn);
+            this.PrestadoresFiltro_groupBox.Controls.Add(this.Filt_btn);
+            this.PrestadoresFiltro_groupBox.Controls.Add(this.Filter_lbl);
+            this.PrestadoresFiltro_groupBox.Controls.Add(this.Filter_textBox);
+            this.PrestadoresFiltro_groupBox.Controls.Add(this.Option03_radioButton);
+            this.PrestadoresFiltro_groupBox.Controls.Add(this.Option02_radioButton);
+            this.PrestadoresFiltro_groupBox.Controls.Add(this.Option01_radioButton);
+            this.PrestadoresFiltro_groupBox.Location = new System.Drawing.Point(685, 25);
+            this.PrestadoresFiltro_groupBox.Name = "PrestadoresFiltro_groupBox";
+            this.PrestadoresFiltro_groupBox.Size = new System.Drawing.Size(352, 87);
+            this.PrestadoresFiltro_groupBox.TabIndex = 5;
+            this.PrestadoresFiltro_groupBox.TabStop = false;
+            this.PrestadoresFiltro_groupBox.Text = "Filtrar Prestadores";
             // 
-            // button9
+            // Reset_btn
             // 
-            this.button9.Location = new System.Drawing.Point(262, 26);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(74, 22);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Revertir";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.Rollback_btn_Click);
+            this.Reset_btn.Location = new System.Drawing.Point(262, 26);
+            this.Reset_btn.Name = "Reset_btn";
+            this.Reset_btn.Size = new System.Drawing.Size(74, 22);
+            this.Reset_btn.TabIndex = 8;
+            this.Reset_btn.Text = "Revertir";
+            this.Reset_btn.UseVisualStyleBackColor = true;
+            this.Reset_btn.Click += new System.EventHandler(this.Rollback_btn_Click);
             // 
             // Filt_btn
             // 
@@ -184,36 +185,37 @@
             this.Option01_radioButton.UseVisualStyleBackColor = true;
             this.Option01_radioButton.CheckedChanged += new System.EventHandler(this.Option01_radioButton_CheckedChanged);
             // 
-            // button4
+            // VerPrestador_btn
             // 
-            this.button4.Location = new System.Drawing.Point(786, 118);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 40);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Ver Prestador";
-            this.button4.UseVisualStyleBackColor = true;
+            this.VerPrestador_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.VerPrestador_btn.Location = new System.Drawing.Point(786, 118);
+            this.VerPrestador_btn.Name = "VerPrestador_btn";
+            this.VerPrestador_btn.Size = new System.Drawing.Size(95, 40);
+            this.VerPrestador_btn.TabIndex = 6;
+            this.VerPrestador_btn.Text = "Ver Prestador";
+            this.VerPrestador_btn.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // Facturacion_groupBox
             // 
-            this.groupBox2.Controls.Add(this.CargarFactura_btn);
-            this.groupBox2.Controls.Add(this.BuscarFactura_btn);
-            this.groupBox2.Location = new System.Drawing.Point(685, 185);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(147, 125);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Facturacion";
+            this.Facturacion_groupBox.Controls.Add(this.CargarFactura_btn);
+            this.Facturacion_groupBox.Controls.Add(this.BuscarFactura_btn);
+            this.Facturacion_groupBox.Location = new System.Drawing.Point(685, 185);
+            this.Facturacion_groupBox.Name = "Facturacion_groupBox";
+            this.Facturacion_groupBox.Size = new System.Drawing.Size(147, 125);
+            this.Facturacion_groupBox.TabIndex = 7;
+            this.Facturacion_groupBox.TabStop = false;
+            this.Facturacion_groupBox.Text = "Facturacion";
             // 
-            // groupBox3
+            // Pagos_groupBox
             // 
-            this.groupBox3.Controls.Add(this.CargarPago_btn);
-            this.groupBox3.Controls.Add(this.BuscarPago_btn);
-            this.groupBox3.Location = new System.Drawing.Point(838, 185);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(147, 125);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Pagos";
+            this.Pagos_groupBox.Controls.Add(this.CargarPago_btn);
+            this.Pagos_groupBox.Controls.Add(this.BuscarPago_btn);
+            this.Pagos_groupBox.Location = new System.Drawing.Point(838, 185);
+            this.Pagos_groupBox.Name = "Pagos_groupBox";
+            this.Pagos_groupBox.Size = new System.Drawing.Size(147, 125);
+            this.Pagos_groupBox.TabIndex = 8;
+            this.Pagos_groupBox.TabStop = false;
+            this.Pagos_groupBox.Text = "Pagos";
             // 
             // CargarPago_btn
             // 
@@ -233,16 +235,16 @@
             this.BuscarPago_btn.Text = "Buscar Pago";
             this.BuscarPago_btn.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // Debitos_groupBox
             // 
-            this.groupBox4.Controls.Add(this.CargarDebito_btn);
-            this.groupBox4.Controls.Add(this.BuscarDebito_btn);
-            this.groupBox4.Location = new System.Drawing.Point(991, 185);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(147, 125);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Debitos";
+            this.Debitos_groupBox.Controls.Add(this.CargarDebito_btn);
+            this.Debitos_groupBox.Controls.Add(this.BuscarDebito_btn);
+            this.Debitos_groupBox.Location = new System.Drawing.Point(991, 185);
+            this.Debitos_groupBox.Name = "Debitos_groupBox";
+            this.Debitos_groupBox.Size = new System.Drawing.Size(147, 125);
+            this.Debitos_groupBox.TabIndex = 9;
+            this.Debitos_groupBox.TabStop = false;
+            this.Debitos_groupBox.Text = "Debitos";
             // 
             // CargarDebito_btn
             // 
@@ -278,11 +280,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 675);
             this.Controls.Add(this.NuevoPrestador_btn);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Debitos_groupBox);
+            this.Controls.Add(this.Pagos_groupBox);
+            this.Controls.Add(this.Facturacion_groupBox);
+            this.Controls.Add(this.VerPrestador_btn);
+            this.Controls.Add(this.PrestadoresFiltro_groupBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Prestadores_dataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -292,11 +294,11 @@
             this.Text = "Control de Facturación OSDEL";
             this.Load += new System.EventHandler(this.frmHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Prestadores_dataGridView)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
+            this.PrestadoresFiltro_groupBox.ResumeLayout(false);
+            this.PrestadoresFiltro_groupBox.PerformLayout();
+            this.Facturacion_groupBox.ResumeLayout(false);
+            this.Pagos_groupBox.ResumeLayout(false);
+            this.Debitos_groupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,22 +311,22 @@
         private System.Windows.Forms.Button CargarFactura_btn;
         private System.Windows.Forms.Button BuscarFactura_btn;
         private System.Windows.Forms.Button CargarPrestador_btn;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox PrestadoresFiltro_groupBox;
         private System.Windows.Forms.TextBox Filter_textBox;
         private System.Windows.Forms.RadioButton Option03_radioButton;
         private System.Windows.Forms.RadioButton Option02_radioButton;
         private System.Windows.Forms.RadioButton Option01_radioButton;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button VerPrestador_btn;
         private System.Windows.Forms.Label Filter_lbl;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox Facturacion_groupBox;
+        private System.Windows.Forms.GroupBox Pagos_groupBox;
         private System.Windows.Forms.Button CargarPago_btn;
         private System.Windows.Forms.Button BuscarPago_btn;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox Debitos_groupBox;
         private System.Windows.Forms.Button CargarDebito_btn;
         private System.Windows.Forms.Button BuscarDebito_btn;
         private System.Windows.Forms.Button Filt_btn;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button Reset_btn;
         private System.Windows.Forms.Button NuevoPrestador_btn;
     }
 }
