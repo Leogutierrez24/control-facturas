@@ -99,6 +99,20 @@ namespace DAL
             return command;
         }
 
+        public DataTable Read(string query)
+        {
+            SQLiteCommand command = CreateCommand(query);
+            DataTable table = new DataTable();
+            using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+            {
+                Console.WriteLine(command.Connection.ConnectionString);
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                adapter.Dispose();
+            }
+            return table;
+        }
+
         public DataTable Read(string query, List<SQLiteParameter> parameters = null)
         {
             SQLiteCommand command = CreateCommand(query, parameters);

@@ -84,7 +84,7 @@ namespace DAL
             SQLiteParameter fechaRecepcionParam = _con.CreateParameter(obj.FechaRecepcion.ToShortDateString(), "fechaRecepcion");
             SQLiteParameter montoParam = _con.CreateParameter(obj.Monto, "monto");
             SQLiteParameter observacionesParam = _con.CreateParameter(obj.Observacion, "observaciones");
-            SQLiteParameter estadoIDParam = _con.CreateParameter(1, "estado");
+            SQLiteParameter estadoIDParam = _con.CreateParameter(0, "estado");
             List<SQLiteParameter> parametersList = new List<SQLiteParameter>
             {
                 prestadorIDParam,
@@ -97,7 +97,7 @@ namespace DAL
                 estadoIDParam
             };
 
-            string query = "INSERT INTO facturas (id_prestador, punto_venta, numero, fecha_creacion, fecha_recepcion, monto, observaciones, id_estado) VALUES (@prestadorID, @puntoVenta, @numero, @fechaCreacion, @fechaRecepcion, @monto, @observaciones, @estado);";
+            string query = "INSERT INTO facturas (id_prestador, punto_venta, numero, fecha_creacion, fecha_recepcion, monto, observaciones, estado) VALUES (@prestadorID, @puntoVenta, @numero, @fechaCreacion, @fechaRecepcion, @monto, @observaciones, @estado);";
 
             bool isDuplicate = Exists(new List<SQLiteParameter> { prestadorIDParam, puntoVentaParam, numeroParam });
 
@@ -131,6 +131,94 @@ namespace DAL
         public override List<Factura> SelectAll()
         {
             throw new NotImplementedException();
+        }
+
+        public Resultado<List<Factura>> SelectByPuntoDeVenta(int puntoDeVenta)
+        {
+            List<Factura> facturasList;
+            Resultado<List<Factura>> result;
+            SQLiteParameter puntoDeVentaParam = _con.CreateParameter(puntoDeVenta, "puntoDeVenta");
+            string query = "SELECT * FROM facturas WHERE punto_venta=@puntoDeVenta";
+
+            _con.Connect();
+            DataTable data = _con.Read(query, new List<SQLiteParameter> { puntoDeVentaParam });
+            _con.Disconnect();
+
+            if (data.Rows.Count > 0)
+            {
+                facturasList = MapFacturas(data);
+                result = new Resultado<List<Factura>>(true, facturasList);
+            } else result = new Resultado<List<Factura>>(false, null);
+
+            return result;
+        }
+
+        public Resultado<List<Factura>> SelectByNumero(int numero)
+        {
+            List<Factura> facturasList;
+            Resultado<List<Factura>> result;
+            SQLiteParameter numeroParam = _con.CreateParameter(numero, "numero");
+            string query = "SELECT * FROM facturas WHERE numero=@numero";
+
+            _con.Connect();
+            DataTable data = _con.Read(query, new List<SQLiteParameter> { numeroParam });
+            _con.Disconnect();
+
+            if (data.Rows.Count > 0)
+            {
+                facturasList = MapFacturas(data);
+                result = new Resultado<List<Factura>>(true, facturasList);
+            }
+            else result = new Resultado<List<Factura>>(false, null);
+
+            return result;
+        }
+
+        public Resultado<List<Factura>> SelectByMonto(float monto)
+        {
+            List<Factura> facturasList;
+            Resultado<List<Factura>> result;
+            SQLiteParameter montoParam = _con.CreateParameter(monto, "monto");
+            string query = "SELECT * FROM facturas WHERE monto=@monto";
+
+            _con.Connect();
+            DataTable data = _con.Read(query, new List<SQLiteParameter> { montoParam });
+            _con.Disconnect();
+
+            if (data.Rows.Count > 0)
+            {
+                facturasList = MapFacturas(data);
+                result = new Resultado<List<Factura>>(true, facturasList);
+            }
+            else result = new Resultado<List<Factura>>(false, null);
+
+            return result;
+        }
+
+        public Resultado<List<Factura>> SelectByPrestador(string prestadorName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Resultado<List<Factura>> SelectByEstado(int estado)
+        {
+            List<Factura> facturasList;
+            Resultado<List<Factura>> result;
+            SQLiteParameter estadoParam = _con.CreateParameter(estado, "estado");
+            string query = "SELECT * FROM facturas WHERE estado=@estado";
+
+            _con.Connect();
+            DataTable data = _con.Read(query, new List<SQLiteParameter> { estadoParam });
+            _con.Disconnect();
+
+            if (data.Rows.Count > 0)
+            {
+                facturasList = MapFacturas(data);
+                result = new Resultado<List<Factura>>(true, facturasList);
+            }
+            else result = new Resultado<List<Factura>>(false, null);
+
+            return result;
         }
 
         public Resultado<List<Factura>> SelectByNumero(int numero, int prestadorID)

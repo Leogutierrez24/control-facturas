@@ -152,7 +152,8 @@ namespace UI
 
         private void BuscarFactura_btn_Click(object sender, EventArgs e)
         {
-
+            frmSearchFactura form = new frmSearchFactura();
+            form.ShowDialog();
         }
     }
 }

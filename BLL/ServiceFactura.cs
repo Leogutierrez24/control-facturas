@@ -60,6 +60,11 @@ namespace BLL
             return mapper.SelectById(id);
         }
 
+        public List<BE.Factura> GetByPuntoDeVenta(int puntoDeVenta)
+        {
+            return mapper.SelectAll();
+        }
+
         // Queda pendiente impactar los debitos en la base de datos.
         public OperacionDebito AddDebito(BE.Factura factura, BE.Debito debito)
         {
