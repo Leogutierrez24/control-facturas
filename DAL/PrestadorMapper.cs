@@ -68,7 +68,7 @@ namespace DAL
         {
             int result;
             SQLiteParameter nombreParam = _con.CreateParameter(obj.Nombre, "nombre");
-            SQLiteParameter puntoVentaParam = (obj.PuntoVenta != 0) ? _con.CreateParameter(obj.PuntoVenta, "puntoVenta") : null;
+            SQLiteParameter puntoVentaParam = _con.CreateParameter(obj.PuntoVenta, "puntoVenta");
 
             string query = $"INSERT INTO prestadores (nombre, punto_venta) VALUES (@nombre, @puntoVenta);";
             _con.Connect();
@@ -87,6 +87,7 @@ namespace DAL
             Resultado<BE.Prestador> result;
             SQLiteParameter nombreParam = _con.CreateParameter(name, "nombre");
             string query = "SELECT * FROM prestadores WHERE nombre=@nombre;";
+
             _con.Connect();
             DataTable data = _con.Read(query, new List<SQLiteParameter> { nombreParam });
             _con.Disconnect();

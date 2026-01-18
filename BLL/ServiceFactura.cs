@@ -49,20 +49,37 @@ namespace BLL
             return result;
         }
 
-        public List<BE.Factura> FindAllByPrestador(BE.Prestador prestador)
+        public Resultado<List<Factura>> GetByPuntoVenta(int puntoVenta)
         {
-            List<BE.Factura> facturas = mapper.SelectAllByPrestador(prestador.ID);
-            return facturas;
+            if (puntoVenta < 0) throw new ArgumentException("El punto de venta no puede ser negativo.");
+            return mapper.SelectByPuntoDeVenta(puntoVenta);
         }
 
-        public Resultado<BE.Factura> FindById(int id)
+        public Resultado<List<Factura>> GetByNumero(int numero)
         {
-            return mapper.SelectById(id);
+            if (numero <= 0) throw new ArgumentException("El número de factura no puede ser negativo.");
+            return mapper.SelectByNumero(numero);
         }
 
-        public List<BE.Factura> GetByPuntoDeVenta(int puntoDeVenta)
+        public Resultado<List<Factura>> GetByMonto(float monto)
         {
-            return mapper.SelectAll();
+            if (monto <= 0) throw new ArgumentException("El monto no puede ser negativo o igual a cero.");
+            return mapper.SelectByMonto(monto);
+        }
+
+        public Resultado<List<Factura>> GetByEstado(EstadoFactura state)
+        {
+            Resultado<List<Factura>> resultado;
+            if (state == EstadoFactura.Paga) resultado = mapper.SelectByEstado((int)EstadoFactura.Paga);
+            else if (state == EstadoFactura.Pendiente) resultado = mapper.SelectByEstado((int)EstadoFactura.Pendiente);
+            else if (state == EstadoFactura.Rechazada) resultado = mapper.SelectByEstado((int)EstadoFactura.Rechazada);
+            else throw new ArgumentException("El estado de la factura no es válido.");
+            return resultado;
+        }
+
+        public Resultado<List<Factura>> GetVencidas()
+        {
+            throw new NotImplementedException();
         }
 
         // Queda pendiente impactar los debitos en la base de datos.

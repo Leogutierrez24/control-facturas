@@ -50,6 +50,12 @@ namespace BE
             set { fechaRecepcion = value; }
         }
 
+		private readonly DateTime fechaVencimiento;
+		public DateTime FechaVencimiento
+		{
+			get { return fechaVencimiento; }
+		}
+
 		private float monto;
 		public float Monto
 		{
@@ -85,7 +91,10 @@ namespace BE
 			set { estado = value; }
 		}
 
-		public Factura() { }
+		public Factura() 
+		{ 
+			fechaVencimiento = fechaRecepcion.AddDays(30);
+        }
 
 		public Factura(Prestador prestador, int puntoVenta, int numero, DateTime fechaCreacion, DateTime fechaRecepcion, float monto, string observacion = "")
 		{
@@ -94,7 +103,8 @@ namespace BE
 			this.numero = numero;
 			this.fechaCreacion = fechaCreacion;
 			this.fechaRecepcion = fechaRecepcion;
-			this.monto = monto;
+            fechaVencimiento = fechaRecepcion.AddDays(30);
+            this.monto = monto;
 			this.observacion = observacion;
 			this.estado = EstadoFactura.Pendiente;
         }

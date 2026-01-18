@@ -43,6 +43,15 @@ namespace BE
 			set { facturasPendiente = value; }
 		}
 
+		public Prestador()
+		{
+			facturas = new List<Factura>();
+        }
 
-	}
+		public Prestador(string nombre, int puntoVenta = 0)
+		{
+			this.nombre = nombre;
+			this.puntoVenta = puntoVenta;
+        }
+    }
 }

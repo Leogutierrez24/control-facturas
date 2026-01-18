@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace UI
 {
@@ -24,10 +25,13 @@ namespace UI
 
     public partial class frmSearchFactura : Form
     {
+        private ServiceFactura serviceFactura;
+
         public frmSearchFactura()
         {
             InitializeComponent();
             ChargeFilterOptions();
+            serviceFactura = ServiceFactura.GetInstance();
         }
 
         private void ChargeFilterOptions()
@@ -70,18 +74,32 @@ namespace UI
                 {
                     if (searchSelectedOption < 2 && int.TryParse(Search_textBox.Text, out int intResult))
                     {
-                        MessageBox.Show("El valor ingresado es: " + intResult);
+                        if (searchSelectedOption == 0) // Option 1: Punto de venta
+                        {
+                                
+                        }
+                        else // Option 2: Número
+                        {
+                        
+
+                        }
                     }
                     else if (searchSelectedOption == 2 && float.TryParse(Search_textBox.Text, out float floatResult))
                     {
-                        MessageBox.Show("El valor ingresado es: " + floatResult);
+                        // Option 3: Monto
+                        
                     }
                     else MessageBox.Show("El valor ingresado debe ser numérico.");
                 }
                 else if (searchSelectedOption > 2)
                 {
-
-                } else MessageBox.Show("Es necesario ingresar un valor para la busqueda.");
+                    // Option 4: Pagas
+                    // Option 5: Pendientes
+                    // Option 6: Rechazadas
+                    // Option 7: Debitada
+                    // Option 8: Vencidas
+                }
+                else MessageBox.Show("Es necesario ingresar un valor para la busqueda.");
             } else MessageBox.Show("Elegi una opcion de filtro para continuar.");
         }
     }

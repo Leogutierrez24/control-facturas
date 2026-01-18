@@ -137,7 +137,6 @@ namespace UI
         }
 
         // Fecha de recepcion
-
         private void SetDateTimes()
         {
             FechaFactura_dateTimePicker.MaxDate = DateTime.Now;
@@ -176,7 +175,7 @@ namespace UI
             if (Prestadores_dataGridView.SelectedRows.Count > 0)
             {
                 int id = Convert.ToInt32(Prestadores_dataGridView.SelectedRows[0].Cells["id"].Value);
-                BE.Prestador selectedPrestador = prestadores.Find(p => p.ID == id);
+                Prestador selectedPrestador = prestadores.Find(p => p.ID == id);
 
                 if ((!PuntoVenta_checkBox.Checked && puntoVenta != 0) || (PuntoVenta_checkBox.Checked && puntoVenta == 0))
                 {
@@ -184,7 +183,7 @@ namespace UI
                     {
                         if (Monto_numericUpDown.Value > 0)
                         {
-                            BE.Factura newFactura = new BE.Factura(
+                            Factura newFactura = new Factura(
                                 selectedPrestador,
                                 puntoVenta,
                                 numeroFactura,

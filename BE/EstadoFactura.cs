@@ -5,6 +5,5 @@
         Pendiente = 0,
         Paga = 1,
         Rechazada = 2,
-        Vencida = 3
     }
 }
